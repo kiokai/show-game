@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0
+}
+
+#app {
+  width: 400px;
+  margin: auto
+}
+
+#button {
+  width: 150px;
+  height: 150px;
+  border: 1px solid silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 50%;
+}
+
+#button #gc {
+  display: flex
+}
+
+
+#button #gc div {
+  width: 60px;
+    
+}
+
+#button button {
+  background: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+#button button i {
+  font-size: 30px
+}
+
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid silver;
+}
+
+.head #time {
+  border-left: 1px solid silver;
+  min-width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid silver;
+  padding: 10px
+}
+
+.head #show {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.head #show div {
+  font-size: 20px
+}
