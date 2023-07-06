@@ -49,11 +49,11 @@ function Game(lists) {
     if (lists[start].id == id) {
       show[start].style.color = "green"
       start++
-      
-      if(start == 10){
+
+      if (start == 10) {
         text.innerHTML = "You Win"
         clearInterval(gs)
-        cout = 10
+        cout = 100
         buttonStart.style.display = "block"
       }
     }
@@ -64,22 +64,40 @@ function Game(lists) {
       check(this.id)
     }
   }
+
+  document.onkeydown = function(event) {
+    switch (event.keyCode) {
+      case 37:
+        check("left")
+        break;
+      case 38:
+        check("up")
+        break;
+      case 39:
+        check("right")
+        break;
+      case 40:
+        check("down")
+        break;
+    }
+  };
+
 }
 
-var cout = 10
+var cout = 100
 var gs
 const text = document.getElementById("text")
 const buttonStart = document.getElementById("start")
 
 window.onload = function() {
-  
+
   buttonStart.onclick = () => {
     buttonStart.style.display = "none"
     text.innerHTML = ""
 
     const lists = generateArrow()
     const time = document.getElementById("time")
-    
+
 
     Game(lists)
 
@@ -90,11 +108,11 @@ window.onload = function() {
 
       if (cout < 0) {
         clearInterval(gs)
-        cout = 10
-        
+        cout = 100
+
         text.innerHTML = "You Lose"
         buttonStart.style.display = "block"
       }
-    }, 1000)
+    }, 100)
   }
 }
