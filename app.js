@@ -84,14 +84,26 @@ function Game(lists) {
 
 }
 
+function db(id){
+  const button = document.querySelectorAll("#button button")
+
+  for(var i of button){
+    i.disabled = id
+  }
+}
+
+
 var cout = 20
 var gs
 const text = document.getElementById("text")
 const buttonStart = document.getElementById("start")
 
+
+
 window.onload = function() {
 
   buttonStart.onclick = () => {
+    db(false)
     buttonStart.style.display = "none"
     text.innerHTML = ""
 
@@ -112,7 +124,8 @@ window.onload = function() {
 
         text.innerHTML = "You Lose"
         buttonStart.style.display = "block"
+        db(true)
       }
     }, 100)
   }
-}
+    }
