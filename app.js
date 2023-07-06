@@ -56,6 +56,13 @@ function Game(lists) {
         cout = 20
         buttonStart.style.display = "block"
       }
+    } else {
+      clearInterval(gs)
+      cout = 20
+      
+      text.innerHTML = "You Lose"
+      buttonStart.style.display = "block"
+      db(true)
     }
   }
 
@@ -128,4 +135,4 @@ window.onload = function() {
       }
     }, 100)
   }
-    }
+}
