@@ -53,7 +53,7 @@ function Game(lists) {
       if (start == 10) {
         text.innerHTML = "You Win"
         clearInterval(gs)
-        cout = 100
+        cout = 20
         buttonStart.style.display = "block"
       }
     }
@@ -84,7 +84,7 @@ function Game(lists) {
 
 }
 
-var cout = 100
+var cout = 20
 var gs
 const text = document.getElementById("text")
 const buttonStart = document.getElementById("start")
@@ -108,7 +108,7 @@ window.onload = function() {
 
       if (cout < 0) {
         clearInterval(gs)
-        cout = 100
+        cout = 20
 
         text.innerHTML = "You Lose"
         buttonStart.style.display = "block"
