@@ -4,7 +4,7 @@ body {
 }
 
 #app {
-  width: 400px;
+  width: 900px;
   margin: auto
 }
 
@@ -36,6 +36,10 @@ body {
   align-items: center;
   justify-content: center;
   border: none;
+}
+
+#button #up, #button #down {
+  width: 100%;
 }
 
 #button button i {
