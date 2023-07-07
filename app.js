@@ -57,6 +57,7 @@ function Game(lists) {
         buttonStart.style.display = "block"
       }
     } else {
+      show[start].style.color = "red"
       clearInterval(gs)
       cout = 20
       
